@@ -31,7 +31,6 @@ x = {"dog": "has a tail and goes woof!", "cat": "says meow", "mouse": "chased by
 word = input("Enter a word: ")
 print("The definition is : ", x[word])
 
-
 dictionaries = {
     "I": 1,
     "V": 5,

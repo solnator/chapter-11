@@ -26,7 +26,23 @@ print(d["A"])
 print(d["B"])
 print(d["C"])
 
-# x = {"dog": "has a tail and goes woof!", "cat": "says meow", "mouse": "chased by cats"}
+x = {"dog": "has a tail and goes woof!", "cat": "says meow", "mouse": "chased by cats"}
 
-# word = input("Enter a word: ")
-# print("The definition is : ", x[word])
+word = input("Enter a word: ")
+print("The definition is : ", x[word])
+
+
+dictionaries = {
+    "I": 1,
+    "V": 5,
+    "X": 10,
+    "L": 50,
+    "C": 100,
+    "CD": 400,
+    "D": 500,
+    "CM": 900,
+    "M": 1000,
+}
+letter = input("Eneter Roman number: ").capitalize()
+
+print(f"Roman number {letter} is {dictionaries[letter]}")

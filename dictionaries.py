@@ -45,3 +45,10 @@ dictionaries = {
 letter = input("Eneter Roman number: ").capitalize()
 
 print(f"Roman number {letter} is {dictionaries[letter]}")
+
+deck = [{'value':i,'suit':c}
+        for c in ['spade','clubs','diamond','hearts']
+        for i in range(2,15)]
+
+print(deck[51]['value'])
+print(deck[51]['suit'])

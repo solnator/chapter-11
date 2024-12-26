@@ -71,18 +71,19 @@ for key in d:
 ### list(d.values())      [1,3]                    values of d
 ### list(d.items())       [('A',1),('B',3)]        (key,value) pairs of d
 
-lines=open('/home/solomon/Documents/chapter-11/test.txt').read()
+
+lines=open('/home/solomon/Documents/chapter-11/test.txt').read() 
 lines = [line.strip() for line in open("/home/solomon/Documents/chapter-11/test.txt")]
-print(lines)
+print(lines) 
 
-from string import punctuation
-lines=lines.lower()
-for p in punctuation:
-    lines=lines.replace(p, '')
-words=lines.split()
-print(words)
+from string import punctuation 
+lines=lines.lower() 
+for p in punctuation: 
+    lines=lines.replace(p, '') 
+words=lines.split() 
+print(words) 
 
 
-with open('/home/solomon/Documents/chapter-11/test.txt') as file:
-    content = file.read()
-    print(content)
+with open('/home/solomon/Documents/chapter-11/test.txt') as file: 
+    content = file.read() 
+    print(content) 

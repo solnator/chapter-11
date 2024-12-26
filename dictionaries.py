@@ -53,7 +53,7 @@ deck = [{'value':i,'suit':c}
 print(deck[51]['value'])
 print(deck[51]['suit'])
 
-### 11.3 Working With Dictionaries
+### 11.3 Working With Dictionaries 
 d = {"A": 100, "B": 200, "C": 300, "D": 400, "E": 500}
 letter = input("Enter a letter: ").capitalize()
 if letter in d:

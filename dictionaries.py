@@ -52,3 +52,21 @@ deck = [{'value':i,'suit':c}
 
 print(deck[51]['value'])
 print(deck[51]['suit'])
+
+### 11.3 Working With Dictionaries
+d = {"A": 100, "B": 200, "C": 300, "D": 400, "E": 500}
+letter = input("Enter a letter: ").capitalize()
+if letter in d:
+    print("The value is", d[letter])
+else:
+    print("Not in dictionary")
+
+for key in d:
+    print(key)
+    print(d[key])
+    print(key,d[key])  ## Print the list of d.
+
+### Statement                Result                Description
+### list(d)               ['A','B']                keys of d
+### list(d.values())      [1,3]                    values of d
+### list(d.items())       [('A',1),('B',3)]        (key,value) pairs of d

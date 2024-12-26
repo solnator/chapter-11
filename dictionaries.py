@@ -64,7 +64,7 @@ else:
 for key in d:
     print(key)
     print(d[key])
-    print(key,d[key])  ## Print the list of d.
+    print(key,d[key])
 
 ### Statement                Result                Description
 ### list(d)               ['A','B']                keys of d

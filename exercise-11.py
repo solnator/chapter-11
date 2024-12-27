@@ -51,3 +51,17 @@ while True:
     except ValueError:
         print("Please enter a valid amount.")
 
+
+### Question 3 A and B
+months = {}
+while True:
+    month_name = input("Enter month name(type ,done, when finish): ")
+    if month_name.lower() == "done":
+        break
+    try:
+        days = input(f"Enter the days of {month_name}: ")
+        months[month_name] = days
+    except ValueError:
+        print("Enter a valid numbers.")
+months = sorted(months)  ### Question B
+print(months)

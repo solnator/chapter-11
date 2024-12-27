@@ -25,3 +25,29 @@ price of product(type done to quite): "
     else:
         print(f"{search_product} is not available in the store.")
 
+
+### Question 2 integrated to Question 1
+## Find the products less than my money(find affordable products)
+while True:
+    try:
+        money = input(
+            "Enter an amount of money to find affordable products (or type 'done' to quit): "
+        )
+        if money.lower() == "done":
+            break
+        money = float(money)
+
+        # Find products that are less than or equal to the entered amount
+        affordable_products = [
+            product for product, price in products.items() if price <= money
+        ]
+
+        if affordable_products:
+            print("Products you can afford:")
+            for product in affordable_products:
+                print(f"- {product} (${products[product]:.2f})")
+        else:
+            print("No products are within your budget.")
+    except ValueError:
+        print("Please enter a valid amount.")
+

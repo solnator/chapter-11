@@ -74,10 +74,11 @@ for key in d:
 ### list(d.items())       [('A',1),('B',3)]        (key,value) pairs of d
 
 
+### 11.4 Counting Words
 # lines = open("test.txt").read()
 lines = open("/home/solomon/Documents/chapter-11/test.txt").read()
 lines = [line.strip() for line in open("/home/solomon/Documents/chapter-11/test.txt")]
-print(lines)
+print(lines)   ## Print original file.
 
 from string import punctuation
 

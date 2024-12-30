@@ -86,6 +86,7 @@ lines = lines.lower()
 for p in punctuation:
     lines = lines.replace(p, "")
 words = lines.split()
+print(len(word))   ### Count how many words on the file.
 print(words)
 
 

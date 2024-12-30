@@ -89,6 +89,16 @@ words = lines.split()
 print(len(word))   ### Count how many words on the file.
 print(words)
 
+d = {}
+for w in words:
+    if w in d:   ### Count words and duplicate words.
+        d[w] += 1
+    else:
+        d[w] = 1
+        
+print(d)
+
+
 
 with open("/home/solomon/Documents/chapter-11/test.txt") as file:
     content = file.read()

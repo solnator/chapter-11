@@ -35,6 +35,7 @@ while True:
         )
         if money.lower() == "done":
             break
+        
         money = float(money)
 
         # Find products that are less than or equal to the entered amount

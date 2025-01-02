@@ -67,3 +67,31 @@ while True:
         
 months = sorted(months)  ### Question B
 print(months)
+
+
+### Question 4
+users = {
+    "user1": "Pass@1234",
+    "user2": "Secure!5678",
+    "user3": "Alpha$9012",
+    "user4": "Beta#3456",
+    "user5": "Gamma%7890",
+    "user6": "Delta^1234",
+    "user7": "Epsilon&5678",
+    "user8": "Zeta*9012",
+    "user9": "Theta(3456",
+    "user10": "Iota)7890",
+}
+while True:
+    username = input("Enter your username: ")
+
+    if username in users:
+        correct_password = users[username]
+        password = input("Enter your password: ")
+        if password == correct_password:
+            print("You are now logged in to the system.")
+            break
+        else:
+            print("Password is invalid!")
+    else:
+        print("You are no\'t valid user to the system.")

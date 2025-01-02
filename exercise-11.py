@@ -35,7 +35,7 @@ while True:
         )
         if money.lower() == "done":
             break
-        
+
         money = float(money)
 
         # Find products that are less than or equal to the entered amount
@@ -64,7 +64,7 @@ while True:
         months[month_name] = days
     except ValueError:
         print("Enter a valid numbers.")
-        
+
 months = sorted(months)  ### Question B
 print(months)
 
@@ -94,4 +94,4 @@ while True:
         else:
             print("Password is invalid!")
     else:
-        print("You are no\'t valid user to the system.")
+        print("You are no't valid user to the system.")

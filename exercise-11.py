@@ -112,19 +112,22 @@ while True:
         print("Enter a valid number.")
 
 ## (a) Calculate and display winning percentage.
-team_to_check=input('\nEnter a team name to see its winning percentage: ')
+team_to_check = input("\nEnter a team name to see its winning percentage: ")
 if team_to_check in team:
-    win,losse=team[team_to_check]
-    total_games =win +losse
-    if total_games>0:
-        winning_percentage=(win/total_games)*100
-        print(f'{team_to_check}\'s winning percentage:{winning_percentage:.2f}%')
+    win, losse = team[team_to_check]
+    total_games = win + losse
+    if total_games > 0:
+        winning_percentage = (win / total_games) * 100
+        print(f"{team_to_check}'s winning percentage:{winning_percentage:.2f}%")
     else:
-        print(f'{team_to_check} has not played any games.')
+        print(f"{team_to_check} has not played any games.")
 else:
-    print(f'{team_to_check} is not in the records.')
+    print(f"{team_to_check} is not in the records.")
 
 # (b) Create a list of the number of wins for each team
 wins_list = [record[0] for record in team.values()]
 print("\nList of number of wins for each team:", wins_list)
 
+# (c) Create a list of teams with winning records
+winning_teams = [team for team, record in team.items() if record[0] > record[1]]
+print("Teams with winning records:", winning_teams)

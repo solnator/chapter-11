@@ -98,3 +98,16 @@ while True:
 
 
 ### Question 5
+team = {}
+
+while True:
+    team_name = input("Enter the team name: ")
+    if team_name.lower() == "done":
+        break
+    try:
+        win = int(input(f"Enter the numbers of wins for {team_name}: "))
+        losse = int(input(f"HEnter the numbers of losses for {team_name}: "))
+        team[team_name] = [win, losse]
+    except ValueError:
+        print("Enter a valid number.")
+

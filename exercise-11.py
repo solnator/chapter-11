@@ -111,3 +111,16 @@ while True:
     except ValueError:
         print("Enter a valid number.")
 
+## (a) Calculate and display winning percentage.
+team_to_check=input('\nEnter a team name to see its winning percentage: ')
+if team_to_check in team:
+    win,losse=team[team_to_check]
+    total_games =win +losse
+    if total_games>0:
+        winning_percentage=(win/total_games)*100
+        print(f'{team_to_check}\'s winning percentage:{winning_percentage:.2f}%')
+    else:
+        print(f'{team_to_check} has not played any games.')
+else:
+    print(f'{team_to_check} is not in the records.')
+    

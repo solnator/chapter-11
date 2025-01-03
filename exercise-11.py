@@ -106,7 +106,7 @@ while True:
         break
     try:
         win = int(input(f"Enter the numbers of wins for {team_name}: "))
-        losse = int(input(f"HEnter the numbers of losses for {team_name}: "))
+        losse = int(input(f"Enter the numbers of losses for {team_name}: "))
         team[team_name] = [win, losse]
     except ValueError:
         print("Enter a valid number.")
@@ -123,4 +123,8 @@ if team_to_check in team:
         print(f'{team_to_check} has not played any games.')
 else:
     print(f'{team_to_check} is not in the records.')
-    
+
+# (b) Create a list of the number of wins for each team
+wins_list = [record[0] for record in team.values()]
+print("\nList of number of wins for each team:", wins_list)
+

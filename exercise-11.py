@@ -131,3 +131,45 @@ print("\nList of number of wins for each team:", wins_list)
 # (c) Create a list of teams with winning records
 winning_teams = [team for team, record in team.items() if record[0] > record[1]]
 print("Teams with winning records:", winning_teams)
+
+
+### Exercise 6        By ChatGPT
+
+teams = {}
+
+while True:
+    game_input = input(
+        "Enter game scores (e.g., 'Team1 10-7 Team2') or 'done' to finish: "
+    )
+    if game_input.lower() == "done":
+        break
+
+    try:
+        parts = game_input.split("-")
+        team1_data = parts[0].strip().rsplit(" ", 1)  # Split into team name and score
+        team2_data = parts[1].strip().split(" ", 1)  # Split into score and team name
+
+        team1, score1 = team1_data[0], int(team1_data[1])
+        team2, score2 = team2_data[1], int(team2_data[0])
+
+        if team1 not in teams:
+            teams[team1] = [0, 0]
+        if team2 not in teams:
+            teams[team2] = [0, 0]
+
+        # Update wins and losses based on scores
+        if score1 > score2:
+            teams[team1][0] += 1
+            teams[team2][1] += 1
+        elif score2 > score1:
+            teams[team2][0] += 1
+            teams[team1][1] += 1
+        else:
+            print("It's a tie! No wins or losses recorded.")
+
+    except (ValueError, IndexError):
+        print("Invalid input format. Please try again.")
+
+print("\nTeam Records (wins, losses):")
+for team, record in teams.items():
+    print(f"{team}: {record}")

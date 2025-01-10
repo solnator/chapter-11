@@ -176,6 +176,7 @@ for team, record in teams.items():
 
 ### Question 9
 from random import shuffle
+
 deck = [
     {"value": i, "suit": c}
     for c in ["spade", "clubs", "diamond", "hearts"]
@@ -183,17 +184,21 @@ deck = [
 ]
 shuffle(deck)
 
-for i in range (3):
-    print(deck[i]["value"],deck[i]["suit"])
+for i in range(3):
+    print(deck[i]["value"], deck[i]["suit"])
 
 hand = deck[:3]
+
+
 def is_flush(cards):
     suits = [card["suit"] for card in cards]
-    return len(set(suits)) == 1 
+    return len(set(suits)) == 1
+
 
 def is_kind(cards):
     values = [card["value"] for card in cards]
     return len(set(values)) == 1
+
 
 # print("Hand:", hand)
 if is_flush(hand):

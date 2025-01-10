@@ -173,3 +173,15 @@ while True:
 print("\nTeam Records (wins, losses):")
 for team, record in teams.items():
     print(f"{team}: {record}")
+
+### Question 9
+from random import shuffle
+deck = [
+    {"value": i, "suit": c}
+    for c in ["spade", "clubs", "diamond", "hearts"]
+    for i in range(2, 15)
+]
+shuffle(deck)
+
+for i in range (3):
+    print(deck[i]["value"],deck[i]["suit"])

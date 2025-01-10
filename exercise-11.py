@@ -185,3 +185,18 @@ shuffle(deck)
 
 for i in range (3):
     print(deck[i]["value"],deck[i]["suit"])
+
+hand = deck[:3]
+def is_flush(cards):
+    suits = [card["suit"] for card in cards]
+    return len(set(suits)) == 1 
+
+def is_kind(cards):
+    values = [card["value"] for card in cards]
+    return len(set(values)) == 1
+
+# print("Hand:", hand)
+if is_flush(hand):
+    print("The three cards form a flush!")
+else:
+    print("The three cards do not form a flush.")

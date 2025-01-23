@@ -78,7 +78,7 @@ for key in d:
 # lines = open("test.txt").read()
 lines = open("/home/solomon/Documents/chapter-11/test.txt").read()
 lines = [line.strip() for line in open("/home/solomon/Documents/chapter-11/test.txt")]
-print(lines)   ## Print original file.
+print(lines)  ## Print original file.
 
 from string import punctuation
 
@@ -86,18 +86,17 @@ lines = lines.lower()
 for p in punctuation:
     lines = lines.replace(p, "")
 words = lines.split()
-print(len(word))   ### Count how many words on the file.
+print(len(word))  ### Count how many words on the file.
 print(words)
 
 d = {}
 for w in words:
-    if w in d:   ### Count words and duplicate words.
+    if w in d:  ### Count words and duplicate words.
         d[w] += 1
     else:
         d[w] = 1
-        
-print(d)
 
+print(d)
 
 
 with open("/home/solomon/Documents/chapter-11/test.txt") as file:
@@ -122,6 +121,6 @@ for i in items:
 
 ### Enter a value and find KEY
 d = {"D": 100, "B": 200, "A": 300, "F": 400, "E": 500, "C": 600}
-k=eval(input('Enter a word number: '))
-L = [x[0] for x in d.items() if x[1]==k]
+k = eval(input("Enter a word number: "))
+L = [x[0] for x in d.items() if x[1] == k]
 print(L)

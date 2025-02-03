@@ -6,6 +6,7 @@ def print_pyramid(n):
     for i in range(1, n+1, 2):
         print( '*' * i)
 
+
 # Input: An odd integer between 1 and 999
 n = int(input("Enter odd number between 1 and 999: "))
 print_pyramid(n)

@@ -1,19 +1,19 @@
 def is_valid_substitution_cipher(original, encoded):
     if len(original) != len(encoded):
-        return False  # Lengths must match
+        return False 
     
-    mapping = {}  # Maps original letters to encoded letters
-    reverse_mapping = {}  # Ensures unique substitution (one-to-one)
+    mapping = {} 
+    reverse_mapping = {} 
 
     for o, e in zip(original, encoded):
         if o in mapping:
             if mapping[o] != e:
-                return False  # Inconsistent mapping
+                return False  
         else:
             if e in reverse_mapping:
-                return False  # Ensures one-to-one mapping
+                return False 
             mapping[o] = e
-            reverse_mapping[e] = o  # Reverse mapping to prevent reuse
+            reverse_mapping[e] = o
     
     return True
 

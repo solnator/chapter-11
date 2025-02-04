@@ -1,12 +1,23 @@
-def print_pyramid(n):
-    if n % 2 == 0 or n < 1 or n > 999:
-        print()
-        return
+def is_valid_substitution_cipher(original, encoded):
+    if len(original) != len(encoded):
+        return False  # Lengths must match
     
-    for i in range(1, n+1, 2):
-        print( '*' * i)
+    mapping = {}  # Maps original letters to encoded letters
+    reverse_mapping = {}  # Ensures unique substitution (one-to-one)
 
+    for o, e in zip(original, encoded):
+        if o in mapping:
+            if mapping[o] != e:
+                return False  # Inconsistent mapping
+        else:
+            if e in reverse_mapping:
+                return False  # Ensures one-to-one mapping
+            mapping[o] = e
+            reverse_mapping[e] = o  # Reverse mapping to prevent reuse
+    
+    return True
 
-# Input: An odd integer between 1 and 999
-n = int(input("Enter odd number between 1 and 999: "))
-print_pyramid(n)
+# Example cases
+print(is_valid_substitution_cipher("BOOK", "CXYZ"))  # False (O → X, O → Y)
+print(is_valid_substitution_cipher("BOOK", "CXXK"))  # False (K → K)
+print(is_valid_substitution_cipher("BOOK", "CXXZ"))  # True (Valid mapping)

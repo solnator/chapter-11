@@ -180,14 +180,14 @@ from random import shuffle
 deck = [
     {"value": i, "suit": c}
     for c in ["spade", "clubs", "diamond", "hearts"]
-    for i in range(2, 15)
+    for i in range(1, 15)
 ]
 shuffle(deck)
 
-for i in range(3):
+for i in range(2):
     print(deck[i]["value"], deck[i]["suit"])
 
-hand = deck[:3]
+hand = deck[:2]
 
 
 def is_flush(cards):
@@ -205,3 +205,8 @@ if is_flush(hand):
     print("The three cards form a flush!")
 else:
     print("The three cards do not form a flush.")
+
+if is_kind(hand):
+    print("The three cards form a kind.")
+else:
+    print("The three cards do not form a kind.")

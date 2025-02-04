@@ -180,7 +180,7 @@ from random import shuffle
 deck = [
     {"value": i, "suit": c}
     for c in ["spade", "clubs", "diamond", "hearts"]
-    for i in range(1, 15)
+    for i in range(2, 15)
 ]
 shuffle(deck)
 

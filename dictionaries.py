@@ -118,3 +118,8 @@ items.sort()
 for i in items:
     print(i)
 
+### Enter a value and find KEY
+d = {"D": 100, "B": 200, "A": 300, "F": 400, "E": 500, "C": 600}
+k = eval(input("Enter a word number: "))
+L = [x[0] for x in d.items() if x[1] == k]
+print(L)

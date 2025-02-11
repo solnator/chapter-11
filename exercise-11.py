@@ -213,18 +213,18 @@ else:
 
 
 ### Question 11
-def is_valid_cipher(word,encoded):
-    word=input("Enter a string: ")
-    encoded=input(f"Enter a {len(word)} encoded letter: ")
-    word=word.lower()
-    encoded=encoded.lower()
-    if len(word)!=len(encoded):
+def is_valid_cipher(word, encoded):
+    word = input("Enter a string: ")
+    encoded = input(f"Enter a {len(word)} encoded letter: ")
+    word = word.lower()
+    encoded = encoded.lower()
+    if len(word) != len(encoded):
         return False
     mapping = {}
     reverse_mapping = {}
-    for o,e in zip(word,encoded):
+    for o, e in zip(word, encoded):
         if o in mapping:
-            if mapping[o]!=e:
+            if mapping[o] != e:
                 return False
     else:
         if e in reverse_mapping:
@@ -233,6 +233,8 @@ def is_valid_cipher(word,encoded):
         reverse_mapping[e] = o
 
     return True
+
+
 print(is_valid_cipher("BOOK", "CXYZ"))
 print(is_valid_cipher("BOOK", "CXXK"))
 print(is_valid_cipher("BOOK", "CXXZ"))

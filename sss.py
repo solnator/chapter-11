@@ -17,6 +17,7 @@ def is_valid_substitution_cipher(original, encoded):
     
     return True
 
+
 # Example cases
 print(is_valid_substitution_cipher("BOOK", "CXYZ"))  # False (O → X, O → Y)
 print(is_valid_substitution_cipher("BOOK", "CXXK"))  # False (K → K)

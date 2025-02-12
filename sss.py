@@ -1,20 +1,20 @@
 def is_valid_substitution_cipher(original, encoded):
     if len(original) != len(encoded):
-        return False 
-    
-    mapping = {} 
-    reverse_mapping = {} 
+        return False
+
+    mapping = {}
+    reverse_mapping = {}
 
     for o, e in zip(original, encoded):
         if o in mapping:
             if mapping[o] != e:
-                return False  
+                return False
         else:
             if e in reverse_mapping:
-                return False 
+                return False
             mapping[o] = e
             reverse_mapping[e] = o
-    
+
     return True
 
 

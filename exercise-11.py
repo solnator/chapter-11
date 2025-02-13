@@ -234,7 +234,6 @@ def is_valid_cipher(word, encoded):
 
     return True
 
-
 print(is_valid_cipher("BOOK", "CXYZ"))
 print(is_valid_cipher("BOOK", "CXXK"))
 print(is_valid_cipher("BOOK", "CXXZ"))

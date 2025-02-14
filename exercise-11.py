@@ -211,7 +211,6 @@ if is_kind(hand):
 else:
     print("The three cards do not form a kind.")
 
-
 ### Question 11
 def is_valid_cipher(word, encoded):
     word = input("Enter a string: ")

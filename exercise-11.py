@@ -134,7 +134,6 @@ print("Teams with winning records:", winning_teams)
 
 
 ### Exercise 6        By ChatGPT
-
 teams = {}
 
 while True:

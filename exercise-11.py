@@ -174,6 +174,7 @@ print("\nTeam Records (wins, losses):")
 for team, record in teams.items():
     print(f"{team}: {record}")
 
+
 ### Question 9
 from random import shuffle
 

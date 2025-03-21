@@ -133,7 +133,7 @@ winning_teams = [team for team, record in team.items() if record[0] > record[1]]
 print("Teams with winning records:", winning_teams)
 
 
-### Exercise 6        By ChatGPT
+### Exercise 6        with ChatGPT
 teams = {}
 
 while True:
